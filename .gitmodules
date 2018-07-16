@@ -1,0 +1,4 @@
+[submodule "admisc"]
+	path = admisc
+	url = https://github.com/jeonghanlee/admisc
+	ignore = all

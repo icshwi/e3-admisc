@@ -1,0 +1,16 @@
+>>
+Script is used     : create_e3_modules.bash
+Script Path        : /home/jhlee/e3/tools/template_gen
+User               : jhlee
+Log Time           : 2018Jul16-1019-24CEST
+e3 repo Hash       : 9e3f1c0
+>> 
+EPICS_MODULE_NAME  :                                                           admisc
+E3_MODULE_SRC_PATH :                                                           admisc
+EPICS_MODULE_URL   :                                   https://github.com/jeonghanlee
+E3_TARGET_URL      :                                        https://github.com/icshwi
+>> 
+e3 module name     :                                                        e3-admisc
+e3 module url full :                            https://github.com/jeonghanlee/admisc
+e3 target url full :                              https://github.com/icshwi/e3-admisc
+>> 
