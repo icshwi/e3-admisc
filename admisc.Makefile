@@ -54,10 +54,10 @@ SOURCES += $(APPSRC)/NDPluginFits.cpp
 #SOURCES += $(APPSRC)/NDPluginSource.cpp
 SOURCES += $(APPSRC)/NDPluginImaging.cpp
 
-DBDs += $(APPSRC)/NDFileAscii.dbd
-DBDs += $(APPSRC)/NDPluginFits.dbd
+DBDS += $(APPSRC)/NDFileAscii.dbd
+DBDS += $(APPSRC)/NDPluginFits.dbd
 #DBDs += $(APPSRC)/NDPluginSource.dbd
-DBDs += $(APPSRC)/NDPluginImaging.dbd
+DBDS += $(APPSRC)/NDPluginImaging.dbd
 
 
 USR_INCLUDES += -I/usr/local/include
