@@ -23,14 +23,20 @@
 
 where_am_I := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 include $(E3_REQUIRE_TOOLS)/driver.makefile
+include $(where_am_I)/../configure/DECOUPLE_FLAGS
 
 # If one would like to use the module dependency restrictly,
 # one should look at other modules makefile to add more
 # In most case, one should ignore the following lines:
 
-#ifneq ($(strip $(ASYN_DEP_VERSION)),)
-#asyn_VERSION=$(ASYN_DEP_VERSION)
-#endif
+
+ifneq ($(strip $(ASYN_DEP_VERSION)),)
+asyn_VERSION=$(ASYN_DEP_VERSION)
+endif
+
+ifneq ($(strip $(ADCORE_DEP_VERSION)),)
+ADCore_VERSION=$(ADCORE_DEP_VERSION)
+endif
 
 # Exclude linux-ppc64e6500
 EXCLUDE_ARCHS = linux-ppc64e6500
@@ -40,9 +46,6 @@ APP:=pluginsApp
 APPDB:=$(APP)/Db
 APPSRC:=$(APP)/src
 
-ifneq ($(strip $(ADCORE_DEP_VERSION)),)
-ADCore_VERSION=$(ADCORE_DEP_VERSION)
-endif
 
 USR_INCLUDES += -I$(where_am_I)$(APPSRC)
 
