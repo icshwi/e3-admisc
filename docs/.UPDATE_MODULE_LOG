@@ -1,0 +1,14 @@
+
+>>
+Update Log Time    : 2018Dec04-1500-16CET
+>>
+Script is used     : e3TemplateGenerator.bash
+Script Path        : /home/iocuser/ics_gitsrc/e3-tools/e3TemplateGenerator
+User               : iocuser
+e3 repo Hash       : c02b1c3
+
+EPICS_MODULE_NAME  :                             admisc
+E3 MODULE VERSION  :                              3.0.0
+EPICS BASE VERSION :                        base-3.15.5
+E3 REQUIRE VERSION :                              3.0.0
+>>
