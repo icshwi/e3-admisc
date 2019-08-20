@@ -3,7 +3,6 @@
 modules.order
 Module.symvers
 Mkfile.old
-dkms.conf
 core.*
 #*
 .#*
@@ -12,3 +11,6 @@ core.*
 \#*
 .cvsignore
 *_old/
+*PVs.list
+*-loc/*.Makefile
+admisc/*.Makefile

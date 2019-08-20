@@ -1,4 +1,3 @@
 [submodule "admisc"]
 	path = admisc
 	url = https://gitlab.esss.lu.se/beam-diagnostics/bde/epics/modules/admisc.git
-	ignore = all
