@@ -66,10 +66,14 @@ USR_CFLAGS   += -std=c99
 # TEMPLATES += $(wildcard $(APPDB)/*.db)
 # TEMPLATES += $(wildcard $(APPDB)/*.db)
 # TEMPLATES += $(wildcard $(APPDB)/*.proto)
-TEMPLATES += $(wildcard $(APPDB)/*.template)
+# TEMPLATES += $(wildcard $(APPDB)/*.template)
+TEMPLATES += $(APPDB)/NDFits.template
+TEMPLATES += $(APPDB)/NDFitsN.template
+TEMPLATES += $(APPDB)/NDTrace.template
 
 
 DBDINC_SRCS += $(APPSRC)/NDPluginFits.cpp
+DBDINC_SRCS += $(APPSRC)/NDPluginTrace.cpp
 #DBDINC_SRCS += $(APPSRC)/NDFileAscii.cpp
 #DBDINC_SRCS += $(APPSRC)/NDPluginImaging.cpp
 #DBDINC_SRCS += $(APPSRC)/NDPluginSource.cpp
@@ -94,6 +98,7 @@ SOURCES += $(APPSRC)/lmmin.c
 SOURCES += $(DBDINC_SRCS)
 
 DBDS += $(APPSRC)/NDPluginFits.dbd
+DBDS += $(APPSRC)/NDPluginTrace.dbd
 # DBDS += $(APPSRC)/calcSupport_withSNCSEQ.dbd
 # DBDS += $(APPSRC)/calcSupport_withSSCAN.dbd
 
