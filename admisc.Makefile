@@ -35,6 +35,10 @@ include $(E3_REQUIRE_CONFIG)/DECOUPLE_FLAGS
 # one should look at other modules makefile to add more
 # In most case, one should ignore the following lines:
 
+ifneq ($(strip $(ADSUPPORT_DEP_VERSION)),)
+ADSupport_VERSION=$(ADSUPPORT_DEP_VERSION)
+endif
+
 ifneq ($(strip $(ASYN_DEP_VERSION)),)
 asyn_VERSION=$(ASYN_DEP_VERSION)
 endif
@@ -45,8 +49,8 @@ endif
 
 
 ## Exclude linux-ppc64e6500
-##EXCLUDE_ARCHS = linux-ppc64e6500
-##EXCLUDE_ARCHS += linux-corei7-poky
+EXCLUDE_ARCHS = linux-ppc64e6500
+EXCLUDE_ARCHS += linux-corei7-poky
 
 APP:=pluginsApp
 APPDB:=$(APP)/Db
@@ -76,20 +80,16 @@ DBDINC_SRCS += $(APPSRC)/NDPluginFits.cpp
 DBDINC_SRCS += $(APPSRC)/NDPluginTrace.cpp
 #DBDINC_SRCS += $(APPSRC)/NDFileAscii.cpp
 #DBDINC_SRCS += $(APPSRC)/NDPluginImaging.cpp
-#DBDINC_SRCS += $(APPSRC)/NDPluginSource.cpp
 
 DBDINC_DBDS = $(subst .c,.dbd,   $(DBDINC_SRCS:$(APPSRC)/%=%))
 DBDINC_HDRS = $(subst .cpp,.h,   $(DBDINC_SRCS:$(APPSRC)/%=%))
 DBDINC_DEPS = $(subst .c,$(DEP), $(DBDINC_SRCS:$(APPSRC)/%=%))
 
-
 HEADERS += $(APPSRC)/lmcurve.h
 HEADERS += $(APPSRC)/lmmin.h
-HEADERS += $(APPSRC)/lmstruct.h 
+HEADERS += $(APPSRC)/lmstruct.h
 HEADERS += $(APPSRC)/testdata.h
 HEADERS += $(DBDINC_HDRS)
-#HEADERS += $(APPSRC)/lmcurve_tyd.h
-
 
 SOURCES += $(APPSRC)/lmcurve.c 
 SOURCES += $(APPSRC)/lmmin.c
